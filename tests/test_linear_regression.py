@@ -7,4 +7,4 @@ def test_linear_regression():
     y = X[:, 0] * 5
     lr = LinearRegression()
     lr.fit(X, y)
-    assert pytest.approx(lr.predict(X)[-1]) == y[-1]
+    assert pytest.approx(lr.predict(X)[-1], rel=1e-3) == y[-1]
